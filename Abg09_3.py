@@ -87,16 +87,16 @@ def naiveSearch(text, searchpattern):
 # jedem möglichen SuchHash vergleicht.
 # Die erste Stelle i, an der True geliefert wird ist die gesuchte Stelle:
 
-# counter = 0
-# for i in range(len(text)-l+1):
-#     # i = 0
-#     # Fall 1: Hashes matchen
-#     if exerptHash == pattern1Hash or exerptHash == pattern2Hash or exerptHash == pattern3Hash:  # ect
-#         if text[i:i+l] == search1 or text[i:i+l] == search2 or text[i:i+l] == search3:
-#             counter += 1
+counter = 0
+for i in range(len(text)-l+1):
+    # i = 0
+    # Fall 1: Hashes matchen
+    if exerptHash == pattern1Hash or exerptHash == pattern2Hash or exerptHash == pattern3Hash:  # ect
+        if text[i:i+l] == search1 or text[i:i+l] == search2 or text[i:i+l] == search3:
+            counter += 1
 
-#     # Fall 2: Hashes matchen nicht: bleibt so
-#     else:  # weiter gehen:
-#         # Hash des neuen Excerpts berechnen:
-#         exerptHash = b * (exerptHash - ord(text[i]) * m) + ord(text[i+1]) % p
-#         # i += 1
+    # Fall 2: Hashes matchen nicht: bleibt so
+    else:  # weiter gehen:
+        # Hash des neuen Excerpts berechnen:
+        exerptHash = b * (exerptHash - ord(text[i]) * m) + ord(text[i+1]) % p
+        # i += 1
